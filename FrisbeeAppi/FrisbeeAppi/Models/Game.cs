@@ -1,16 +1,19 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using SQLite;
 
 namespace FrisbeeAppi.Models
 {
     public class Game
     {
+        [PrimaryKey, AutoIncrement]
+        public int ID { get; set; }
         /// <summary>
         /// Tiedostonimi
         /// </summary>
         public string Filename { get; set; }
         public string Text { get; set; }
+        [Ignore]
         /// <summary>
         /// Lista pelin pelaajista
         /// </summary>
@@ -23,6 +26,7 @@ namespace FrisbeeAppi.Models
         /// Loppuaika pvm + klo
         /// </summary>
         public DateTime EndDateTime { get; set; }
+        [Ignore]
         /// <summary>
         /// Pelattava rata
         /// </summary>

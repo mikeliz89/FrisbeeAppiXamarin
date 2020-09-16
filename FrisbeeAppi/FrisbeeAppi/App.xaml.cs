@@ -1,13 +1,27 @@
-﻿using System;
+﻿using FrisbeeAppi.Data;
+using System;
 using System.IO;
 using Xamarin.Forms;
-using Xamarin.Forms.Xaml;
 
 namespace FrisbeeAppi
 {
     public partial class App : Application
     {
         public static string FolderPath { get; private set; }
+
+        static GameDatabase database;
+
+        public static GameDatabase Database
+        {
+            get
+            {
+                if (database == null)
+                {
+                    database = new GameDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Games.db3"));
+                }
+                return database;
+            }
+        }
 
         public App()
         {

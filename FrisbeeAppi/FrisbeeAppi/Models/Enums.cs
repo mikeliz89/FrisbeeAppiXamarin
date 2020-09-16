@@ -1,8 +1,4 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Text;
-
-namespace FrisbeeAppi.Models
+﻿namespace FrisbeeAppi.Models
 {
     /// <summary>
     /// Radan tyyppi
