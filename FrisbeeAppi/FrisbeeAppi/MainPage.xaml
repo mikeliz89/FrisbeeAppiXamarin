@@ -4,22 +4,27 @@
              x:Class="FrisbeeAppi.MainPage" 
              Title="FrisbeeAppi">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Katso pelaajia"
+        <ToolbarItem Text="Pelaajat"
                      Clicked="OnNavigateToPlayersListClicked" />
-        <ToolbarItem Text="Katso ratoja"
+        <ToolbarItem Text="Radat"
                      Clicked="OnNavigateToTracksListClicked" />
         <ToolbarItem Text="+"
                      Clicked="OnGameAddedClicked" />
     </ContentPage.ToolbarItems>
-    <ListView x:Name="listView"
-              Margin="20"
-              ItemSelected="OnListViewItemSelected">
-        <ListView.ItemTemplate>
-            <DataTemplate>
-                <TextCell Text="{Binding Text}"
-                          Detail="{Binding StartDateTime}" />
-            </DataTemplate>
-        </ListView.ItemTemplate>
-    </ListView>
     
+    <ContentPage.Content>
+        <StackLayout VerticalOptions="Center" HorizontalOptions="Center" Margin="0">
+            <ListView x:Name="listView"
+            Margin="20"
+            ItemSelected="OnListViewItemSelected">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <TextCell Text="{Binding Text}"
+                        Detail="{Binding StartDateTime}" />
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+
 </ContentPage>

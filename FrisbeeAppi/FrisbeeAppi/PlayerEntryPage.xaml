@@ -4,9 +4,10 @@
              x:Class="FrisbeeAppi.PlayerEntryPage"
              Title="Lisää pelaaja">
     <StackLayout Margin="20">
+        <Label Text="Pelaajan nimi" />
         <Editor Placeholder="Pelaajan nimi"
                 Text="{Binding Name}"
-                HeightRequest="100" />
+                HeightRequest="50" />
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -15,7 +16,9 @@
             <Button Text="Tallenna" 
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"
-                    Text="Poista" 
+                    Text="Poista"
+                    BackgroundColor="DarkRed"
+                    TextColor="White"
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
     </StackLayout>
