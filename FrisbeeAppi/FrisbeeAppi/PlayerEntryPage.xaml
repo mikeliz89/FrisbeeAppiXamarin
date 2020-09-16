@@ -2,6 +2,7 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="FrisbeeAppi.PlayerEntryPage"
+             xmlns:local="clr-namespace:FrisbeeAppi"
              Title="Lisää pelaaja">
     <StackLayout Margin="20">
         <Label Text="Pelaajan nimi" />
@@ -21,5 +22,7 @@
                     TextColor="White"
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
+        <!-- Todo: Tähän pelaajan avatar tai kuva. Laitettu nyt Vänen kuva esimerkiksi -->
+        <Image Source="{local:ImageResource FrisbeeAppi.Images.vaino.jpg}" />
     </StackLayout>
 </ContentPage>
