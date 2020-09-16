@@ -14,6 +14,7 @@ namespace FrisbeeAppi.Data
             _database = new SQLiteAsyncConnection(dbPath);
             _database.CreateTableAsync<Game>().Wait();
             _database.CreateTableAsync<Track>().Wait();
+            _database.CreateTableAsync<Player>().Wait();
         }
 
         #region Game
@@ -78,6 +79,39 @@ namespace FrisbeeAppi.Data
         public Task<int> DeleteTrackAsync(Track Track)
         {
             return _database.DeleteAsync(Track);
+        }
+
+        #endregion
+
+        #region Player 
+
+        public Task<List<Player>> GetPlayersAsync()
+        {
+            return _database.Table<Player>().ToListAsync();
+        }
+
+        public Task<Player> GetPlayerAsync(int id)
+        {
+            return _database.Table<Player>()
+                            .Where(i => i.ID == id)
+                            .FirstOrDefaultAsync();
+        }
+
+        public Task<int> SavePlayerAsync(Player Player)
+        {
+            if (Player.ID != 0)
+            {
+                return _database.UpdateAsync(Player);
+            }
+            else
+            {
+                return _database.InsertAsync(Player);
+            }
+        }
+
+        public Task<int> DeletePlayerAsync(Player Player)
+        {
+            return _database.DeleteAsync(Player);
         }
 
         #endregion

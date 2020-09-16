@@ -26,6 +26,14 @@ namespace FrisbeeAppi
             } );
         }
 
+        async void OnNavigateToPlayersListClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListPlayers
+            {
+
+            });
+        }
+
         async void OnGameAddedClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GameEntryPage

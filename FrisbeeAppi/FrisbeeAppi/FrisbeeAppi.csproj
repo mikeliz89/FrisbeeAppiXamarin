@@ -17,6 +17,12 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="PlayerEntryPage.xaml.cs">
+      <DependentUpon>PlayerEntryPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="ListPlayers.xaml.cs">
+      <DependentUpon>ListPlayers.xaml</DependentUpon>
+    </Compile>
     <Compile Update="ListTracks.xaml.cs">
       <DependentUpon>ListTracks.xaml</DependentUpon>
     </Compile>
