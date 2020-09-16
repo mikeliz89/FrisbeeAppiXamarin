@@ -22,6 +22,14 @@ namespace FrisbeeAppi
 
         async void OnDeleteButtonClicked(object sender, EventArgs e)
         {
+
+            var result = await this.DisplayAlert("Varmistus", "Haluatko varmasti poistaa tämän pelin?", "Kyllä", "Ei");
+
+            if (!result)
+            {
+                return;
+            }
+
             var game = (Game)BindingContext;
 
             await App.Database.DeleteGameAsync(game);
