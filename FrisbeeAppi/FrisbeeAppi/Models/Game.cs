@@ -35,5 +35,10 @@ namespace FrisbeeAppi.Models
         /// Pelin kuvaus
         /// </summary>
         public string Description { get; set; }
+        [Ignore]
+        /// <summary>
+        /// Pelin tilanne
+        /// </summary>
+        public GameStatus GameStatus { get; set; }
     }
 }

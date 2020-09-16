@@ -18,4 +18,31 @@
         /// </summary>
         Forest = 2
     }
+
+    /// <summary>
+    /// Pelin tilanne
+    /// </summary>
+    public enum GameStatus
+    {
+        /// <summary>
+        /// Ei tiedossa
+        /// </summary>
+        Unknown = 0,
+        /// <summary>
+        /// Aloittamaton kierros
+        /// </summary>
+        NotStarted = 1,
+        /// <summary>
+        /// Aloitettu / käynnissä oleva kierros
+        /// </summary>
+        Started = 2,
+        /// <summary>
+        /// Kierros valmis
+        /// </summary>
+        Finished = 3,
+        /// <summary>
+        /// Keskeneräiseksi merkitty
+        /// </summary>
+        MarkedUnfinished = 4
+    }
 }
