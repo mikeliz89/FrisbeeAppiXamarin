@@ -1,20 +1,18 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="FrisbeeAppi.MainPage">
+             x:Class="FrisbeeAppi.ListTracks">
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Katso ratoja"
-                     Clicked="OnNavigateToTracksListClicked" />
         <ToolbarItem Text="+"
-                     Clicked="OnGameAddedClicked" />
+                     Clicked="OnTrackAddedClicked" />
     </ContentPage.ToolbarItems>
     <ListView x:Name="listView"
               Margin="20"
               ItemSelected="OnListViewItemSelected">
         <ListView.ItemTemplate>
             <DataTemplate>
-                <TextCell Text="{Binding Text}"
-                          Detail="{Binding StartDateTime}" />
+                <TextCell Text="{Binding Name}"
+                          Detail="{Binding Created}" />
             </DataTemplate>
         </ListView.ItemTemplate>
     </ListView>

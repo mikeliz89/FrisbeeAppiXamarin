@@ -18,6 +18,14 @@ namespace FrisbeeAppi
             listView.ItemsSource = await App.Database.GetGamesAsync();
         }
 
+        async void OnNavigateToTracksListClicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ListTracks
+            {
+               
+            } );
+        }
+
         async void OnGameAddedClicked(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new GameEntryPage
