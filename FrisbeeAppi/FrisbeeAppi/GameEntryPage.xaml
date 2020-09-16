@@ -2,9 +2,9 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
              x:Class="FrisbeeAppi.GameEntryPage"
-             Title="Game Entry">
+             Title="Pelaa peli">
     <StackLayout Margin="20">
-        <Editor Placeholder="Enter your note"
+        <Editor Placeholder="Pelin nimi"
                 Text="{Binding Text}"
                 HeightRequest="100" />
         <Grid>
@@ -12,10 +12,10 @@
                 <ColumnDefinition Width="*" />
                 <ColumnDefinition Width="*" />
             </Grid.ColumnDefinitions>
-            <Button Text="Save" 
+            <Button Text="Tallenna" 
                     Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1"
-                    Text="Delete" 
+                    Text="Poista" 
                     Clicked="OnDeleteButtonClicked"/>
         </Grid>
     </StackLayout>
