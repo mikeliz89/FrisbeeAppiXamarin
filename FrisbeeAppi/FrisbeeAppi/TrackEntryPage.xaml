@@ -4,25 +4,39 @@
              x:Class="FrisbeeAppi.TrackEntryPage"
              Title="Lisää rata">
     <StackLayout Margin="20">
+        <Label Text="Radan nimi" />
         <Editor Placeholder="Radan nimi"
-                Text="{Binding Name}"
-                HeightRequest="100" />
+                    Text="{Binding Name}"
+                    HeightRequest="50" />
+        <Label Text="Radan lyhyt sanallinen kuvaus" />
         <Editor Placeholder="Radan lyhyt sanallinen kuvaus"
-                Text="{Binding Description}"
-                HeightRequest="100" />
+                    Text="{Binding Description}"
+                    HeightRequest="75" />
+        <Label Text="Väylien määrä" />
         <Editor Placeholder="Väylien määrä"
-                Text="{Binding Holes}"
-                HeightRequest="100" />
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Text="Tallenna" 
-                    Clicked="OnSaveButtonClicked" />
-            <Button Grid.Column="1"
-                    Text="Poista" 
-                    Clicked="OnDeleteButtonClicked"/>
-        </Grid>
+                    Text="{Binding HolesCount}"
+                    HeightRequest="50" />
+        <Button Text="Luo väylät" 
+                        Clicked="OnCreateHolesButtonClicked" />
+        <ListView x:Name="listViewHoles"
+                  Margin="0">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <StackLayout Orientation="Horizontal">
+                            <Label Text="#" ></Label>
+                            <Label Text="{Binding Number}" ></Label>
+                            <Label Text="Par: " ></Label>
+                            <Label Text="{Binding Par}" TextColor="Gray"></Label>
+                        </StackLayout>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        <Button Text="Tallenna" 
+                        Clicked="OnSaveButtonClicked" />
+        <Button Grid.Column="1"
+                        Text="Poista" 
+                        Clicked="OnDeleteButtonClicked"/>
     </StackLayout>
 </ContentPage>

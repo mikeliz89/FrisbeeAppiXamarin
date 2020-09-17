@@ -8,6 +8,10 @@ namespace FrisbeeAppi.Models
     {
         [PrimaryKey, AutoIncrement]
         public int ID { get; set; }
+        /// <summary>
+        /// Radan väylien määrä
+        /// </summary>
+        public int HolesCount { get; set; }
         [Ignore]
         /// <summary>
         /// Rataan kuuluvat väylät

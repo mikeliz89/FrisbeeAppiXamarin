@@ -7,6 +7,10 @@ namespace FrisbeeAppi.Models
     public class Hole
     {
         /// <summary>
+        /// Väylän järjestysnumero
+        /// </summary>
+        public int Number { get; set; }
+        /// <summary>
         /// Par-lukema
         /// </summary>
         public int Par { get; set; }
