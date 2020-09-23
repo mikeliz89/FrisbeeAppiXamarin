@@ -26,6 +26,7 @@ namespace FrisbeeAppi.Models
         /// Loppuaika pvm + klo
         /// </summary>
         public DateTime EndDateTime { get; set; }
+        public int TrackId { get; set; }
         [Ignore]
         /// <summary>
         /// Pelattava rata

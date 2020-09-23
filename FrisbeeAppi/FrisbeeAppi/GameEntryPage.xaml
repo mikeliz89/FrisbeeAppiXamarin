@@ -1,22 +1,33 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" 
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
-             x:Class="FrisbeeAppi.GameEntryPage"
+						 xmlns:xReference="clr-namespace:FrisbeeAppi.Models"
+						 x:Class="FrisbeeAppi.GameEntryPage"
              Title="Pelaa peli">
-    <StackLayout Margin="20">
-        <Editor Placeholder="Pelin nimi"
+	<StackLayout Margin="20">
+		<Label Text="Pelin nimi" />
+		<Editor Placeholder="Pelin nimi"
                 Text="{Binding Text}"
-                HeightRequest="100" />
-        <Grid>
-            <Grid.ColumnDefinitions>
-                <ColumnDefinition Width="*" />
-                <ColumnDefinition Width="*" />
-            </Grid.ColumnDefinitions>
-            <Button Text="Tallenna" 
+                HeightRequest="50" />
+		<Label Text="Valitse rata" />
+
+		<Picker x:Name="TrackPicker" 
+				    Title="Valitse rata"
+            TitleColor="Red"
+				    BindingContext="{Binding Source = xReference:Track}"
+				    ItemDisplayBinding="{Binding Name}"
+				    SelectedIndex="{Binding ID}"
+				    SelectedItem="{Binding ID}"/>
+		<Grid>
+			<Grid.ColumnDefinitions>
+				<ColumnDefinition Width="*" />
+				<ColumnDefinition Width="*" />
+			</Grid.ColumnDefinitions>
+			<Button Text="Tallenna" 
                     Clicked="OnSaveButtonClicked" />
-            <Button Grid.Column="1"
+			<Button Grid.Column="1"
                     Text="Poista" 
                     Clicked="OnDeleteButtonClicked"/>
-        </Grid>
-    </StackLayout>
+		</Grid>
+	</StackLayout>
 </ContentPage>
