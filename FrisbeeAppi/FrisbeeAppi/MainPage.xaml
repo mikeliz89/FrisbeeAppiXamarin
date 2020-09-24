@@ -4,11 +4,11 @@
              xmlns:local="clr-namespace:FrisbeeAppi"
              x:Class="FrisbeeAppi.MainPage" 
              Title="FrisbeeAppi">
-    <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Pelaajat"
-                     Clicked="OnNavigateToPlayersListClicked" />
+	  <ContentPage.ToolbarItems>
+		    <ToolbarItem Text="Pelaajat"
+                     Clicked="OnNavigateToPlayersListClicked" Order="Secondary" />
         <ToolbarItem Text="Radat"
-                     Clicked="OnNavigateToTracksListClicked" />
+                     Clicked="OnNavigateToTracksListClicked" Order="Secondary" />
         <ToolbarItem Text="+"
                      Clicked="OnGameAddedClicked" />
     </ContentPage.ToolbarItems>
