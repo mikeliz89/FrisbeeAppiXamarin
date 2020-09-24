@@ -16,7 +16,19 @@
         /// <summary>
         /// Metsärata
         /// </summary>
-        Forest = 2
+        Forest = 2,
+        /// <summary>
+        /// Peltorata
+        /// </summary>
+        Field = 3,
+        /// <summary>
+        /// Mäkirata
+        /// </summary>
+        Hill = 4,
+        /// <summary>
+        /// Sekalainen
+        /// </summary>
+        Miscellaneous = 5
     }
 
     /// <summary>
