@@ -2,6 +2,7 @@
 using Xamarin.Forms;
 using FrisbeeAppi.Models;
 using System.Linq;
+using System.Threading.Tasks;
 
 namespace FrisbeeAppi
 {
@@ -18,6 +19,10 @@ namespace FrisbeeAppi
 
             var game = (Game)BindingContext;
 
+            await GetTracksAndSetSelection(game);
+        }
+
+        async Task GetTracksAndSetSelection (Game game) {
             var tracks = await App.Database.GetTracksAsync();
             var tracksListOrdered = tracks.OrderBy(a => a.Name).ToList();
             TrackPicker.ItemsSource = tracksListOrdered;
@@ -28,7 +33,7 @@ namespace FrisbeeAppi
               if(selectedTrack != null)
                 TrackPicker.SelectedIndex = tracksListOrdered.FindIndex(a => a.ID == game.TrackId);
             }
-        }
+		    }
 
         async void OnSaveButtonClicked(object sender, EventArgs e)
         {
