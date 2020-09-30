@@ -12,7 +12,6 @@ namespace FrisbeeAppi.Models
         /// Tiedostonimi
         /// </summary>
         public string Filename { get; set; }
-        public string Text { get; set; }
         [Ignore]
         /// <summary>
         /// Lista pelin pelaajista
@@ -26,6 +25,9 @@ namespace FrisbeeAppi.Models
         /// Loppuaika pvm + klo
         /// </summary>
         public DateTime EndDateTime { get; set; }
+        /// <summary>
+        /// Pelattava rata
+        /// </summary>
         public int TrackId { get; set; }
         [Ignore]
         /// <summary>
