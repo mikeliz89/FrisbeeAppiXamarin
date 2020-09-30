@@ -57,4 +57,30 @@
         /// </summary>
         MarkedUnfinished = 4
     }
+   
+    /// <summary>
+    /// Kiekon tilanne
+    /// </summary>
+    public enum DiscStatus {
+        /// <summary>
+        /// Ei tiedossa
+        /// </summary>
+        Unknown = 0,
+        /// <summary>
+        /// Reservissä / ei käytössä
+        /// </summary>
+        InReserve = 1,
+        /// <summary>
+        /// Laukussa / käytössä
+        /// </summary>
+        InTheBag = 2,
+        /// <summary>
+        /// Lainassa
+        /// </summary>
+        Loaned = 3,
+        /// <summary>
+        /// Hukassa
+        /// </summary>
+        Lost = 4
+	  }
 }

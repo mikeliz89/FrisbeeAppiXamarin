@@ -46,5 +46,9 @@ namespace FrisbeeAppi.Models
 		    /// Loppufeidi
 		    /// </summary>
 		    public double Fade { get; set; }
+		    /// <summary>
+				/// Kiekon tilanne
+				/// </summary>
+			  public DiscStatus DiscStatus { get; set; }
 		}
 }
