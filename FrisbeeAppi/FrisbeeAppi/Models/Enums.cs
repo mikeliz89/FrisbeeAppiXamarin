@@ -83,4 +83,30 @@
         /// </summary>
         Lost = 4
 	  }
+
+    /// <summary>
+    /// Pelimoodi
+    /// </summary>
+    public enum GameMode {
+      /// <summary>
+      /// Normaali
+      /// </summary>
+      Normal = 0,
+      /// <summary>
+      /// Parikisa
+      /// </summary>
+      PairMatch = 1,
+      /// <summary>
+      /// Joukkuekisa
+      /// </summary>
+      TeamMatch = 2,
+      /// <summary>
+      /// Randomoitu heittotyyli
+      /// </summary>
+      Randomizer = 3,
+      /// <summary>
+      /// Puttikisa
+      /// </summary>
+      PuttingMatch = 4
+	  }
 }
